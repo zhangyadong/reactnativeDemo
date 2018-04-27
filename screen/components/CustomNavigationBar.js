@@ -9,7 +9,8 @@ export default class CustomNavigationBar extends Component {
         this.state = {
             title: props.title,
             rightTextArray: props.rightTextArray,
-            navigation: props.navigation
+            navigation: props.navigation,
+            isShowBack: props.isShowBack
         }
     }
 
@@ -33,15 +34,23 @@ export default class CustomNavigationBar extends Component {
         }}><Text style={styles.rightTextTwo}>{rightTexts[1]}</Text></TouchableOpacity>)
     }
 
+    _isShowBack() {
+        if (this.state.isShowBack != null && !this.state.isShowBack) {
+            return null;
+        } else {
+            return (<TouchableOpacity style={styles.leftText} onPress={() => {
+                this.state.navigation.goBack()
+            }}>
+                <Image source={require('../../res/back.png')} style={styles.leftImage}/>
+            </TouchableOpacity>)
+        }
+    }
+
     render() {
         return (
             <View>
                 <View style={styles.navigationLayout}>
-                    <TouchableOpacity style={styles.leftText} onPress={() => {
-                        this.state.navigation.goBack()
-                    }}>
-                        <Image source={require('../../res/back.png')} style={styles.leftImage}/>
-                    </TouchableOpacity>
+                    {this._isShowBack()}
 
                     <Text style={styles.contentText}>{this.state.title}</Text>
 
@@ -79,10 +88,10 @@ const styles = StyleSheet.create({
         height: 20
     },
     contentText: {
-        fontSize: 18,
+        fontSize: 17,
         color: 'black',
         position: 'absolute',
-        fontWeight:'bold',
+        fontWeight: 'bold',
         zIndex: 2
     },
     rightTextOne: {

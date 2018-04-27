@@ -65111,7 +65111,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
-    var _jsxFileName = "/Users/zhangyadong/work/react/AwesomeProject/screen/HomeScreen.js";
+    var _jsxFileName = "/Users/zhangyadong/work/react/AwesomeProject/screen/MainHomeScreen.js";
 
     var _react = _require(_dependencyMap[0], "react");
 
@@ -65443,7 +65443,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
         }
     };
     HomeScreen = (0, _reactNativeCodePush2.default)(codePushOptions)(HomeScreen);
-},412,[111,12,413,416,418,426,434],"screen/HomeScreen.js");
+},412,[111,12,413,416,418,426,434],"screen/MainHomeScreen.js");
 __d(function (global, _require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true

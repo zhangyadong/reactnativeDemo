@@ -47,15 +47,16 @@ export default class CustomScrollableTab extends Component {
 
     render() {
         return (<ScrollableTabView
-                style={{height: 0.5, backgroundColor: '#e5e5e5'}}
+                style={{height: 0.5, backgroundColor: '#ffffff'}}
                 tabBarPosition='top'
+                renderTabBar={() => <ScrollableTabBar/>}
                 tabBarActiveTextColor='#E67F11'
                 tabBarInactiveTextColor='#333'
                 tabBarTextStyle={{
                     fontSize: pxToDp(30), fontFamily: 'PingFangSC-Light',
                     fontWeight: '300'
                 }}
-                tabBarUnderlineStyle={{backgroundColor: '#E67F11', height: 2}}
+                tabBarUnderlineStyle={{backgroundColor: '#E67F11', height: 0}}
                 onChangeTab={(obj) => {
                     this.setState({
                         position: obj.i

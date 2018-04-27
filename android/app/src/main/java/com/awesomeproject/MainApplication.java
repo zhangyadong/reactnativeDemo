@@ -14,6 +14,8 @@ import com.facebook.soloader.SoLoader;
 import com.meituan.android.walle.WalleChannelReader;
 import com.microsoft.codepush.react.CodePush;
 
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,6 +38,7 @@ public class MainApplication extends Application implements ReactApplication {
             Log.i("xxxxxxxxxxxxxx", deploymentKey);
             return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
+                    new SplashScreenReactPackage(),
                     new CodePush(deploymentKey, MainApplication.this, BuildConfig.DEBUG, serverUrl),
                     new AppPackage()
             );

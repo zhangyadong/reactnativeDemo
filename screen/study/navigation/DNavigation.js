@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Button, View} from 'react-native';
-import StudyNavigation from "./StudyNavigation";
 
 let name = 'DNavigation'
 export default class DNavigation extends Component {

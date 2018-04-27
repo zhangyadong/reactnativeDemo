@@ -6,8 +6,8 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {StackNavigator} from 'react-navigation';
-import HomeScreen from './screen/HomeScreen'
+import {StackNavigator, TabNavigator} from 'react-navigation';
+import HomeScreen from './screen/main/MainHomeScreen'
 import GoodsSearchScreen from "./screen/GoodsSearchScreen";
 import TestFlex from "./screen/TestFlex";
 import StudyReactNative from "./screen/study/StudyReactNative";
@@ -19,9 +19,13 @@ import ANavigation from "./screen/study/navigation/ANavigation";
 import BNavigation from "./screen/study/navigation/BNavigation";
 import CNavigation from "./screen/study/navigation/CNavigation";
 import DNavigation from "./screen/study/navigation/DNavigation";
+import MainTabNavigator from "./screen/main/MainTabNavigator";
+import WelcomeScreen from "./screen/main/WelcomeScreen";
 
 const Navigator = StackNavigator(
     {
+        WelcomeScreen:{screen:WelcomeScreen},
+        MainTabNavigator: {screen: MainTabNavigator},
         HomeScreen: {screen: HomeScreen},
         GoodsSearchScreen: {screen: GoodsSearchScreen},
         TestFlex: {screen: TestFlex},
@@ -35,7 +39,7 @@ const Navigator = StackNavigator(
         CNavigation: {screen: CNavigation},
         DNavigation: {screen: DNavigation}
     }, {
-        initialRouteName: 'HomeScreen'
+        initialRouteName: 'WelcomeScreen'
     },
     {
         navigationOptions: {
